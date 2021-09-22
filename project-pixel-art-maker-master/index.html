@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        <label for="inputHeight">Grid Height:</label>
+        <input type="number" id="inputHeight" name="height" min="1" value="10">
+        <label for="inputWidth">Grid Width:</label>
+        <input type="number" id="inputWidth" name="width" min="1" value="26"><br>
+        <input type="button" id ="submission" value="Build It!">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker" value="#ff0000">
+
+    <h2>Design Canvas</h2>
+    <div id="buildCanvas" onload="coloring()">
+        <table id="pixelCanvas"><tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 255, 255);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td></tr>
+            <tr><td style="background-color: rgb(255, 0, 0);"></td><td></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td style="background-color: rgb(255, 0, 0);"></td><td></td><td style="background-color: rgb(255, 0, 0);"></td></tr>
+        </table>
+    </div>
+    <input type="button" id ="refresh" value="Refresh It!">
+            
+    <script src="designs.js"></script>
+</body>
+</html>
